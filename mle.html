@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Vicky Chou – MapLab Enterprise 0→1</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Analytics - global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGG624LRLJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GGG624LRLJ');
+    </script>
+
+    <!-- JQuery -->
+    <script src="./jquery-3.7.1.min.js" type="text/javascript"></script>
+
+    <!-- Import -->
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div id="header"></div>
+
+<div class="project-perspective" style="background-image: url('images/mle/mle-perspective.png');">
+</div>
+
+<div class="container">
+    <div class="tagline">
+        <div class="row">
+            <div class="column">
+                <h6>API & Developer Documentation • QA Testing • UX Design</h6>
+                
+                <h1>MapLab Enterprise 0→1</h1>
+
+                <h3>Created a documentation support model for the Developer Experience (DX) team’s 0→1 high-code product that contains an IDE and a Python SDK with ~200 API endpoints.</h3>
+
+                <div class="row">
+                    <strong class="one column">Role:</strong>
+                    <p class="eleven columns">Technical Writer</p>
+                </div>
+
+                <div class="row">
+                    <strong class="one column">Time:</strong>
+                    <p class="eleven columns">September 2023 - March 2025</p>
+                </div>
+
+                <div class="row">
+                    <strong class="one column">Tools:</strong>
+                    <p class="eleven columns">Astro + Starlight, GitHub, Jira, Jupyter Notebook, Markdown, Paligo, Python, Snagit, Visual Studio Code</p>
+                </div>
+
+                <div class="row"><br></div>
+
+                <div class="row">
+                    <p>As of March 2025, I have single-handedly written all of the documentation for the MapLab Enterprise product offering. For some sample content, you may reference the following (locked) files:</p>
+                    
+                    <ul>
+                        <li><a href="/files/[Komodo Health] MapLab Enterprise - Workspaces - Content.pdf" target="_blank">Workspaces</a></li>
+                        <li><a href="/files/[Komodo Health] MapLab Enterprise - Call an API with the Komodo SDK - Content.pdf" target="_blank">Call an API with the Komodo SDK</a></li>
+                        <li><a href="/files/[Komodo Health] MapLab Enterprise - Functions - Content.pdf" target="_blank">Functions</a></li>
+                    </ul>
+
+                    <p><i>Please note that the above files contain proprietary content for the related product and should only be used in correspondence with this portfolio for recruiting purposes. Company branding and several links and content have therefore been intentionally removed. However, screenshots of the original documentation are linked in the files.</i></p>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bodyWhite">
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="column" id="toc">
+                    <h2>Table of contents</h2>
+    
+                    <ol>
+                        <li><a href="#context">Context</a></li>
+                        <li><a href="#goal">The documentation goal</a></li>
+                        <li><a href="#challenge-1">Challenge #1: Strong voices among the engineers</a></li>
+                        <ol>
+                            <li><a href="#tool">Choosing (and changing) the documentation tool</a></li>
+                            <ol>
+                                <li><a href="#table-tool">[Table] Pros & Cons of Paligo vs. Astro</a></li>
+                                <li><a href="#table-tool-updated">[Table] Pros & Cons of Paligo vs. Astro: Updated</a></li>
+                            </ol>
+                        </ol>
+                        <li><a href="#challenge-2">Challenge #2: Smoke, mirrors, and bugs</a></li>
+                        <ol>
+                            <li><a href="#qa">Becoming the informal QA tester</a></li>
+                        </ol>
+                        <li><a href="#challenge-3">Challenge #3: No standardized processes</a></li>
+                        <ol>
+                            <li><a href="#evangelize">Evangelizing the value of technical writing</a></li>
+                            <li><a href="#workflow">Establishing a documentation workflow</a></li>
+                        </ol>
+                        <li><a href="#challenge-4">Challenge #4: Complex product and information gaps</a></li>
+                        <ol>
+                            <li><a href="#ux">Improving the cookbook UX</a></li>
+                            <ol>
+                                <li><a href="#table-cookbook-issues">[Table] Cookbook Files: Issues</a></li>
+                                <li><a href="#table-cookbook-updates">[Table] Cookbook Files: Updates</a></li>
+                            </ol>
+                        </ol>
+                        <li><a href="#thoughts">Final thoughts</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column" id="context">
+                <h2>Context</h2>
+    
+                <p>I spent most of my first two years in the Technical Writing (TW) team at Komodo Health (“Komodo”) supporting the traditional Mavens products, like <a href="/pubs.html">Publications Planning</a> and <a href="/kcc.html">Care Connect</a>. When my third year in the company approached and I realized I was getting pretty comfortable with the Salesforce products on the Mavens side, I expressed to my manager that I wanted to engage with the proprietary products on the Komodo side as well to tackle more complex developer documentation. I wanted to be sure that I was constantly exposing myself to new technologies, tools, and teams to further my career growth, and I knew that I was the only one responsible for proactively making that happen.</p>
+
+                <p>As a result of my request, I had the opportunity to float around a few teams and products before finally landing on the Developer Experience (DX) team. This was a brand new team in Komodo that consisted of:</p>
+
+                <div class="indented-item">
+                    <ul>
+                        <li>1 interim product manager;</li>
+                        <li>1 engineering manager; and</li>
+                        <li>2 senior software engineers.</li>
+                    </ul>
+                </div>
+
+                <p>They were responsible for implementing the high-code experience within the MapLab product suite that would later be sold as the “<a href="https://www.komodohealth.com/solutions/maplab/maplab-enterprise/" target="_blank">MapLab Enterprise</a>” offering that contains:</p>
+
+                <div class="indented-item">
+                    <ul>
+                        <li>the standard low-code “<a href="https://www.komodohealth.com/solutions/maplab/" target="_blank">MapLab</a>” offering;</li>
+                        <li>the Komodo SDK, which is Komodo’s Python software development kit (SDK) that surfaces data from the Healthcare Map and ~200 API endpoints developed by both the DX team and other API teams within Komodo; and</li>
+                        <li>Komodo Workspaces, each of which is a containerized integrated development environment (IDE) built on top of Visual Studio Code (VS Code), that contains the Komodo SDK.</li>
+                    </ul>
+                </div>
+
+                <p>I started out on the DX team as an observer, listening in on their meetings to get a sense of what exactly they were trying to build and why. I reviewed existing materials like proof-of-concept (POC) demo recordings and slide decks that compared the low-code and high-code offerings.</p>
+
+                <p>I increased my engagement in the DX team over time to eventually build out the documentation site for the product. I worked very closely with every member of the DX team to understand and document the different features and use cases of MapLab Enterprise so that customers could create and access their workspaces through the standard MapLab user interface (UI), call one or more API endpoints to extract data from the Healthcare Map, and then perform analyses on the data to generate some desired insights.</p>
+
+                <p>When MapLab Enterprise and its accompanying documentation site officially launched in December 2024, the DX team had grown to having:</p>
+
+                <div class="indented-item">
+                    <ul>
+                        <li>1 product manager;</li>
+                        <li>1 engineering manager;</li>
+                        <li>4 senior software engineers;</li>
+                        <li>1 QA engineer; and</li>
+                        <li>1 technical writer – me!</li>
+                    </ul>
+                </div>
+
+                <p>Below, I explain at a high level how I worked with the DX team to build out the documentation support model for MapLab Enterprise, including writing all of the corresponding developer documentation for the Komodo SDK and Komodo Workspaces and publishing all of the API documentation generated by various teams throughout the organization. I specifically describe the major challenges I faced throughout this process, how I informally became a quality assurance (QA) tester for the product, and how I ultimately improved the user experience (UX) for new customers of the product.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column" id="documentation-goal">
+                <h2>The documentation goal</h2>
+
+                <p>When I first joined the DX team, both <strong>the company and the team wanted to launch a “developer portal” as the documentation site for MapLab Enterprise.</strong> Every internal stakeholder had a slightly different vision for what the developer portal was supposed to encompass, but they all agreed on wanting:</p>
+
+                <div class="indented-item">
+                    <ol>
+                        <li>documentation on how to install, authenticate into, and use Komodo Workspaces;</li>
+                        <li>documentation on how to call and use the ~200 API endpoints in the Komodo SDK;</li>
+                        <li>a live/interactive sandbox environment to call and test the ~200 API endpoints; and</li>
+                        <li>a way to separate/filter out content for internal users and external customers, as there were ongoing conversations about having different SDKs or API endpoints for the different audiences.</li>
+                    </ol>
+                </div>
+        
+                <p>While most of these requirements were criteria that the TW team and I could typically meet, the third requirement was new to us. This led to many conversations among the DX team members, me and the other TW team members, and even Paligo representatives about what would be the most appropriate documentation tool for the developer portal and manifested into one of the biggest challenges I faced during my time with the DX team.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column" id="challenge-1">
+                <h2>Challenge #1: Strong voices among the engineers</h2>
+
+                <p>Komodo was very fortunate to have many experienced and knowledgeable software engineers on the DX team to build out MapLab Enterprise, but this also meant that the DX engineers had very strong opinions and voices about many things. I struggled for a long time adjusting to their ways of communicating and learning not to take their feedback too personally.</p>
+
+                <br>
+
+                <h3 id="tool">Choosing (and changing) the documentation tool</h3>
+
+                <p>Collaborating with the DX engineers was especially challenging for me when we had to decide on a documentation tool for the developer portal. <strong>I had already been using <a href="https://paligo.net/" target="_blank">Paligo</a> within the TW team for every other product that I was supporting, so I proposed using Paligo for MapLab Enterprise as well.</strong> The DX team, however, disapproved. They were concerned that Paligo would not be robust enough to surface the documentation for the ~200 API endpoints that they and other teams within the organization were generating. I briefly investigated this issue myself and even got on support calls with Paligo representatives, but Paligo and I were unable to devise a feasible solution that would change the DX engineers’ minds in the time that we were given. Additionally, the DX team appeared reluctant to further investigate this issue with us. As a result, even though the TW team and I were hesitant to use a different documentation tool and strategy just for the DX team, we decided to compromise <strong>given the present limitations of Paligo for MapLab Enterprise. We</strong> let the DX team make the final call, and they <strong>ultimately decided on using <a href="https://astro.build/" target="_blank">Astro</a> with <a href="https://starlight.astro.build/" target="_blank">Starlight</a> for the documentation site</strong> because they felt that Astro was a more customizable web framework for building out a developer portal. Upon their decision, the TW team and I asserted that we would subsequently only focus on writing content for them and would not be able to help develop any custom component or branding in Astro due to our own limited resources, to which the DX team agreed. <strong>I began adjusting some of my typical documentation workflows to adapt to the new tool, such as relearning Markdown and adopting the docs-as-code process</strong>, while the DX engineers began pulling in the ~200 API documentation. With all of the content being centralized in the DX team’s GitHub repository (“repo”), it wasn’t long before we finally had a documentation site up for internal stakeholders to reference.</p>
+
+                <br>
+
+                <h5 id="table-tool">[Table] Pros & Cons of Paligo vs. Astro</h5>
+
+                <i>(The bold text is what the DX team valued the most.)</i>
+
+                <table>
+                    <tr>
+                        <th>Documentation Tool</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="trigger logo" data-modal="paligo-logo" src="images/mle/paligo-logo.png" alt="Paligo logo">
+                            
+                            <div class="modal" id="paligo-logo">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/paligo-logo.png">
+                            </div>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>A component content management system (CCMS)</li>
+                                <li>Existing documentation tool used by the TW team, so workflows and processes for other products and teams can be reused and repurposed</li>
+                                <li>Enterprise contract already paid for by the company</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li><strong>Cannot support the automated API documentation of ~200 endpoints</strong></li>
+                                <li>Does not have a live/interactive sandbox environment to call the API endpoints</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="trigger logo" data-modal="astro-logo" src="images/mle/astro-logo.png" alt="Astro logo">
+                            
+                            <div class="modal" id="astro-logo">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/astro-logo.png">
+                            </div>
+
+                            <img class="trigger logo" data-modal="starlight-logo" src="images/mle/starlight-logo.png" alt="Starlight logo">
+                            
+                            <div class="modal" id="starlight-logo">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/starlight-logo.png">
+                            </div>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>A JavaScript web framework that is fast, robust, and customizable</li>
+                                <li>Integrates well with the rest of the code in the DX team’s repo</li>
+                                <li><strong>Can surface the automated API documentation of ~200 endpoints</strong></li>
+                                <li>Could potentially include a live/interactive  sandbox environment to call the API endpoints</li>
+                                <li>Free</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>New documentation tool for the entire company, which would require time to learn and build out new documentation processes</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+                <p><strong>After using Astro and Starlight for some time, though,</strong> the DX team and I decided to reevaluate our decision of choosing Astro over Paligo. In particular, <strong>we all realized that even though Astro was very robust and flexible, many features and customizations that we wanted required more engineering resources from the DX team than anticipated</strong>, such as time and effort to implement the company’s branding, audience tagging, and the sandbox environment for customers to call and test the API endpoints. Additionally, most of these features already either came out of the box in Paligo or have been implemented in Paligo by the TW team, and the sandbox environment was no longer a priority. <strong>With the limited number of engineers that the DX team had, reallocating resources to build out the documentation site over the Komodo SDK and Komodo Workspaces did not seem reasonable.</strong> Instead, finding a solution or workaround to surface the automated API documentation of the ~200 endpoints through Paligo seemed more feasible. As there was also now more trust between the DX team and the TW team, <strong>one senior engineer on the DX team and I were able to work extensively and collaboratively to implement a process that imported and published the automated API documentation alongside my manual developer documentation.</strong> Though the workaround was convoluted – because the API documentation files had to be formatted a certain way to be imported into Paligo, every import had to be uniquely identifiable within Paligo, and several links within the MapLab Enterprise documentation had to be updated every time there was a new import – I made sure to document the entire process within the TW team’s Confluence site to ensure that other TW team members and Komodo staff could support the workflow as needed. <strong>With this solution on hand, I was able to migrate all of the Astro content into Paligo and revert back to my original documentation process while the DX team was able to sunset the Astro documentation site and focus on the actual MapLab Enterprise product offering.</strong></p>
+
+                <br>
+
+                <h5 id="table-tool-updated">[Table] Pros & Cons of Paligo vs. Astro: Updated</h5>
+
+                <i>(The bold texts are the new observations the DX team and I made.)</i>
+
+                <table>
+                    <tr>
+                        <th>Documentation Tool</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="trigger logo" data-modal="paligo-logo" src="images/mle/paligo-logo.png" alt="Paligo logo">
+                            
+                            <div class="modal" id="paligo-logo">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/paligo-logo.png">
+                            </div>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>A component content management system (CCMS) that <strong>contains audience filtering out of the box</strong></li>
+                                <li>Existing documentation tool used by the TW team, so workflows, processes, and <strong>company branding for other products and teams can just be reused</strong> and repurposed</li>
+                                <li><strong>Integrates well with the rest of the MapLab product suite’s documentation</strong></li>
+                                <li><strong>Can surface the automated API documentation of ~200 endpoints with some engineering resources</strong></li>
+                                <li>Enterprise contract already paid for by the company</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li><span style="text-decoration:line-through">Cannot support the automated API documentation of ~200 endpoints</span></li>
+                                <li>Does not have a live/interactive sandbox environment to call the API endpoints</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="trigger logo" data-modal="astro-logo" src="images/mle/astro-logo.png" alt="Astro logo">
+                            
+                            <div class="modal" id="astro-logo">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/astro-logo.png">
+                            </div>
+
+                            <img class="trigger logo" data-modal="starlight-logo" src="images/mle/starlight-logo.png" alt="Starlight logo">
+                            
+                            <div class="modal" id="starlight-logo">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/starlight-logo.png">
+                            </div>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>A JavaScript web framework that is fast, robust, and customizable</li>
+                                <li>Integrates well with the rest of the code in the DX team’s repo</li>
+                                <li><strong>Can surface the automated API documentation of ~200 endpoints</strong></li>
+                                <li>Could potentially include a live/interactive  sandbox environment to call the API endpoints, <strong>but requires more engineering resources</strong></li>
+                                <li>Free</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li><span style="text-decoration:line-through"">New documentation tool for the entire company, which would require time to learn and build out new documentation processes</span></li>
+                                <li><strong>Many features and customizations</strong>, like implementing the live/interaction sandbox environment, the company’s branding, and audience filtering, <strong>would require more engineering resources</strong></li>
+                                <li><strong>Does not integrate well with the rest of the MapLab product suite’s documentation</strong>, which would result in either duplicate content across the two documentation sites or a jarring experience for customers with both offerings</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column" id="challenge-2">
+                <h2>Challenge #2: Smoke, mirrors, and bugs</h2>
+
+                <p>Another major challenge that I faced while working with the DX team was the lack of an actual product for me to use to truly understand what I was supposed to be writing about. For an extended period of time, I was only able to rely on demos that were all smoke and mirrors, and even when I finally did have a testing environment to play around with, I encountered many bugs and unexpected behaviors in the product that prevented me from completing user flows the way they were intended. Even though I knew this type of hurdle was not specific to the DX team or MapLab Enterprise and is typical of any 0→1 product, I still struggled to come to terms with my inability to be productive and deliver tangible results.</p>
+
+                <br>
+
+                <h3 id="qa">Becoming the informal QA tester</h3>
+
+                <p>To help the DX team, which did not have a QA engineer for most of its initial development period and did not have time to implement robust testing protocols, <strong>I took it upon myself to become the first user and unofficial QA tester for MapLab Enterprise.</strong> Whenever one of the DX software engineers marked a ticket as complete, I would quickly go into the staging environment to try out the new feature. I constantly thought about different entry points, user flows, and edge cases for each feature, especially with regards to installing the Komodo SDK and authenticating into the Komodo platform, and logged many bug tickets for the DX team with specific steps and screenshots to reproduce or even workaround the issues. To ensure that I was not raising false alarms with the DX team, though, <strong>I always tried to replicate and troubleshoot any unexpected behaviors myself and see if the issues were due to a user error, a change that an API team had made without notifying the DX team, or an actual bug that the DX team introduced.</strong> Even when a QA engineer finally did join the DX team a few months before the launch of MapLab Enterprise, I continued to question the DX team on how and why certain things worked or didn’t work and supported the QA engineer in ramping up to the product.</p>
+        </div>
+
+        <div class="row">
+            <div class="column" id="challenge-3">
+                <h2>Challenge #3: No standardized processes</h2>
+
+                <p>Aside from having no QA engineer and no testing protocol, as mentioned in the <a href="#challenge-2">Challenge #2: Smoke, mirrors, and bugs</a> section above, the DX team also initially had no documentation process. This was partially due to the size of the DX team and the nature of their 0→1 product, again, but also largely due to a lack of understanding within the DX team about the importance of technical writing.</p>
+
+                <br>
+
+                <h3 id="evangelize">Evangelizing the value of technical writing</h3>
+
+                <p>In the first year that I joined the DX team, the software engineers did not completely understand the type of support or value that I could provide to them through manually written content. They believed that most, if not all, <strong>documentation</strong> could be <strong>generated through automations</strong> and scripts based on their Jira tickets and GitHub PRs and did not particularly see the purpose of having a technical writer. I don’t think they realized at the time that said automations <strong>need to be built and tested and are heavily dependent on the amount of information provided in</strong> those <strong>tickets and PRs</strong>, and the DX team had no time to either implement the automations or add detailed descriptions to their user stories and commits. Additionally, each ticket and PR is a standalone artifact <strong>and there still needs to be something – or someone – to piece together all of the information into a coherent story for users to understand.</strong> This only became more evident to the DX team as time went on, as I produced more written deliverables for MapLab Enterprise, and as more trust was established overall between the DX team and my TW team.</p>
+
+                <br>
+
+                <h3 id="workflow">Establishing a documentation workflow</h3>
+
+                <p>Because there was no standardized documentation process in place, and as the DX team began to appreciate the value of technical writing more, <strong>I took the authority and autonomy to establish and dictate a documentation workflow myself.</strong> I took complete ownership over my own timeline and led the DX team accordingly so that they could focus primarily on software development. My workflow was typically as follows:</p>
+
+                <div class="indented-item">
+                    <ol>
+                        <li><strong>Research:</strong> I attended every team meeting, including daily standups, backlog refinements, and sprint plannings, to understand every ticket that every software engineer was working on</li>
+                        <li><strong>QA Test:</strong> I went into the staging environment to try out the feature the moment the ticket was finished and deployed</li>
+                        <li><strong>Write:</strong> I documented the feature to the best of my ability while considering:</li>
+                        <ol>
+                            <li>the purpose of the feature;</li>
+                            <li>the various components of the feature;</li>
+                            <li>all the possible entry points for the feature;</li>
+                            <li>any possible configurations and customizations for the feature;</li>
+                            <li>any potential limitations with the feature; and</li>
+                            <li>how the feature relates to or integrates with other features or user flows that already exist in the product.</li>
+                        </ol>
+                        <li><strong>SME Review (and Edit):</strong> I shared my documentation changes with the DX engineer who was the dedicated subject matter expert (SME) for the feature to check for accuracy</li>
+                        <ol>
+                            <li>I followed up with them as needed to make sure they reviewed my documentation changes and addressed my questions in a timely manner</li>
+                            <li>I made edits as needed</li>
+                        </ol>
+                        <li><strong>Peer Review (and Edit):</strong> I shared my documentation changes with at least one other technical writer in the TW team to check for readability, clarity, styling, and grammar</li>
+                        <ol>
+                            <li>I made edits as appropriate</li>
+                        </ol>
+                        <li><strong>Publish:</strong> I published the documentation changes alongside the feature releases in the production environment</li>
+                        <ol>
+                            <li>I worked very closely with the DX team to follow their weekly release cadence</li>
+                            <li>I also worked very closely with the technical writer responsible for the other parts of the MapLab product suite to align our documentation changes for the different MapLab offerings</li>
+                        </ol>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column" id="challenge-4">
+                <h2>Challenge #4: Complex product and information gaps</h2>
+
+                <p>The fourth major challenge with working with the DX team was the general complexity of <strong>the MapLab Enterprise product offering</strong>, as it <strong>consisted of multiple moving components owned by different teams</strong> within the organization <strong>and was intended for very technical users</strong> like data scientists who typically build large queries to analyze heavy datasets. MapLab Enterprise was especially hard for me and many members of the DX team to grasp because most of us had never interacted directly with the Healthcare Map, the APIs, or our customers prior and we did not completely understand all of the use cases of the high-code product. <strong>Every DX engineer had</strong> many calls with other teams in Komodo to better understand the existing APIs and our customers’ needs and therefore better understand the features they were responsible for building in MapLab Enterprise. However, this resulted in a <strong>somewhat siloed implementation of many of the components</strong> in MapLab Enterprise and further highlighted the information gaps within the DX team.</p>
+
+                <p>Additionally, since MapLab Enterprise was already complex for the people responsible for building the product, we knew that it was definitely going to be complex for the people trying to use the product as well. <strong>To alleviate the steep learning curve for new users</strong> and simplify the onboarding process, the DX engineers and I tried to devise ways to ensure people could quickly and easily ramp up to the product. <strong>The DX engineers started a cookbook</strong> in Komodo Workspaces that contained several Jupyter Notebook files with sample code to show users how to call an API endpoint or use a feature to jumpstart their data analyses <strong>while I wrote example scenarios</strong> with sample code in my documentation to do the same.</p>
+
+                <br>
+
+                <h3 id="ux">Improving the cookbook UX</h3>
+
+                <p>Even though both the DX engineers and I wanted to help our users quickly ramp up to using MapLab Enterprise, I quickly noticed several issues with the DX team's cookbook and my documentation approach:</p>
+
+                <h5 id="table-cookbook-issues">[Table] Cookbook Files: Issues</h5>
+
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Issue</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Duplicate, but not reusable, content</td>
+                        <td>I was manually copying and pasting code snippets from the cookbook into Paligo to explain sample user flows, which resulted in duplicate code and content between the workspaces and the documentation site</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Code without context</td>
+                        <td>Users were not given much explanation on what specific lines of code did or where any of the generated data would surface or live</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Disparate content</td>
+                        <td>Users did not have an easy way to navigate between their workspaces and the documentation site, such as to learn more about what each API endpoint does</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Lack of a coherent story</td>
+                        <td>The cookbook files were sorted based on creation date, and the DX engineers themselves were unsure if the Jupyter Notebook files were meant to be run sequentially or how each Jupyter Notebook file was supposed to relate to one another</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Inconsistent and unprofessional</td>
+                        <td>The cookbook files did not have consistent or standardized formatting to feel like a polished product</td>
+                    </tr>
+                </table>
+
+                <img class="trigger" data-modal="cookbook-before-1" src="images/mle/cookbook-before-1.png">
+                <!-- <p class="caption"></p> -->
+                
+                <div class="modal" id="cookbook-before-1">
+                    <span class="close">&times;</span>
+                    <img src="images/mle/cookbook-before-1.png">
+                </div>
+
+                <p>I took it upon myself to revamp the cookbook to better explain how the disparate components of MapLab Enterprise worked. I:</p>
+
+                <div class="indented-item">
+                    <ol>
+                        <li>reviewed each file to better understand what its end goal was;</li>
+                        <li>reviewed each cell to better understand why certain API endpoints were called; and</li>
+                        <li>watched several demo recordings of specific customer use cases and features of the product.</li>
+                    </ol>
+                </div>
+
+                <p>I then made improvements in my own workspace with Python, SQL, Markdown, and HTML. I:</p>
+
+                <div class="indented-item">
+                    <ol>
+                        <li>reordered the files so that they can be run sequentially;</li>
+                        <li>added more background context so users could clearly understand what each file does; and</li>
+                        <li>added descriptions and comments to explain what each cell does, including links to the documentation I have written for MapLab Enterprise, and where any generated outputs could be found, like data tables in the MapLab UI.</li>
+                    </ol>
+                </div>
+
+                <p>I also removed the duplicate code snippets from my Paligo documentation and, instead, summarized and referenced the cookbook files as example use cases to encourage users to go directly into the cookbook.</p>
+
+                <p>Throughout this process, I asked many questions, raised any bugs I encountered while testing my own cookbook updates, and finally demoed my cookbook suggestions to the DX team.</p>
+
+                <p>Upon receiving positive feedback on my proposed changes, I obtained approval to commit and push my changes directly to the DX team’s codebase.</p>
+
+                <h5 id="table-cookbook-updates">[Table] Cookbook Files: Updates</h5>
+
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Update</th>
+                        <th>Examples</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>The cookbook files can be run sequentially</td>
+                        <td>
+                            <img class="trigger" data-modal="cookbook-after-1" src="images/mle/cookbook-after-1.png">
+                            
+                            <div class="modal" id="cookbook-after-1">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/cookbook-after-1.png">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">2</td>
+                        <td rowspan="3">The cookbook files have more context</td>
+                        <td>
+                            <img class="trigger" data-modal="cookbook-after-2" src="images/mle/cookbook-after-2.png">
+                            
+                            <div class="modal" id="cookbook-after-2">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/cookbook-after-2.png">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px 15px">
+                            <img class="trigger" data-modal="cookbook-after-3" src="images/mle/cookbook-after-3.png">
+                            
+                            <div class="modal" id="cookbook-after-3">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/cookbook-after-3.png">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px 15px">
+                            <img class="trigger" data-modal="cookbook-after-4" src="images/mle/cookbook-after-4.png">
+                            
+                            <div class="modal" id="cookbook-after-4">
+                                <span class="close">&times;</span>
+                                <img src="images/mle/cookbook-after-4.png">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column" id="thoughts">
+                <h2>Final thoughts</h2>
+
+                <p>Supporting the DX team was probably one of the most difficult undertakings in my technical writing career thus far. I struggled for a long time trying to understand how to best communicate and collaborate with the DX engineers and kept taking a lot of their opinions and feedback personally. I also stressed myself a lot trying to make sure I was producing results that they would acknowledge and appreciate, especially because they didn’t completely understand the importance and value of having a technical writer from the start.</p>
+
+                <p>I think <strong>time naturally allowed greater trust to be established</strong> between the TW team and the DX team, particularly <strong>between me and the engineers.</strong> As I saw firsthand how much pressure they had from both internal leadership and external customers to build out this complex product, I also developed greater empathy for the DX engineers, which made me want to help them out more.</p>
+
+                <p>However, I believe that <strong>letting the DX engineers decide on the initial documentation tool for the developer portal also helped build out the camaraderie between the TW and DX teams</strong> because it showed the DX engineers that we were there not to fight or hinder them but to help and support them. Even though we did end up changing the final documentation platform, I don’t think the time spent using Astro instead of Paligo was any time wasted. <strong>Perfection is the enemy of good and progress, and we made the best decision with the information we had available at the time.</strong> If we didn’t quickly settle on a documentation tool that we truly believed could serve our needs, the DX engineers would have been distracted from coding while I would have been stalled on writing.</p>
+
+                <p>I want to also believe that I actively played a part in convincing the DX engineers the importance of technical writing. For every feature, I diligently compiled and connected all of the disparate pieces of information from Jira tickets, GitHub PRs, Confluence pages, Slack messages, and Zoom meetings into one coherent piece of documentation that told a complete story. <strong>Through the writing of manual documentation and the updating of the cookbook, I provided tangible artifacts that showcased the unique value of having a technical writer.</strong> Producing deliverables like these helped me get a greater sense of belonging and value within the DX team as well, which further enhanced my drive to support the DX team, too.</p>
+
+                <p>Thinking back, <strong>even though I struggled a lot during my time with the DX team, I was able to hold on because I truly – really – enjoy technical writing.</strong> I love the process of gathering and piecing together information, I love writing, and I love being able to simplify some complex piece of information so that more people can understand and take advantage of the information at hand. Even today, with the introduction of so many AI tools, much information is still disparate and still needs a human to piece together. Certain aspects of technical writing may change in this era of AI, but the art of technical writing is still here to stay, and I am here for it.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5 class="icon-top"><a href="javascript:void(0);" onclick="window.scroll(0, 1)";>Back to top <i class="fa fa-arrow-up"></i></a></h5>
+        </div>
+
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
+
+<script src="modal.js"></script>
