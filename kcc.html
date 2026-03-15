@@ -4,7 +4,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Vicky Chou – KCC</title>
+    <title>Vicky Chou – Komodo Care Connect (KCC) V1+</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -169,7 +169,7 @@
                 <p>I tried to take more Trailhead courses on my own to better understand the underlying Salesforce platform but quickly realized that I needed to be more proactive with my approach. I ultimately scheduled several calls with members of the legacy PJN team as well as people in the new KCC team to ask fundamental questions about Salesforce. I also created Lucidchart diagrams to better visualize the relationships among the different entities in the KCC product. In doing so, I was finally able to ramp up to Salesforce in the context of the product that I eventually needed to document.</p>
 
                 <img class="trigger" data-modal="ramp-up-erd" src="images/kcc/ramp-up-erd.png">
-                <p class="caption">The Lucidchart that I had created and annotated with help from PJN and KCC team members. I have redesigned it slightly for this write-up. I use red to call out my questions and blue to represent my notes. The messiness of this diagram is an indication of my confusion at the time.</i></p>
+                <p class="caption">The Lucidchart that I had created and annotated with help from PJN and KCC team members. I have redesigned it slightly for this write-up. I use red to call out my questions and blue to represent my notes. The messiness of this diagram is an indication of my confusion at the time.</p>
                 
                 <div class="modal" id="ramp-up-erd">
                     <span class="close">&times;</span>
@@ -181,7 +181,7 @@
                 <p>To know which parts of the KCC product that I needed to pay particular attention to, I also regularly consulted the live documentation of the Medical Information Cloud (MIC) product, which is Komodo’s first Salesforce Tx app. In doing so, I realized, for instance, that I needed to create entity relationship diagrams (ERDs) for all of KCC’s custom objects and custom metadata types. I received a lot of guidance from the technical writer who created the ERDs for MIC and eventually began creating my own ERDs for KCC in Lucidchart.</p>
 
                 <img class="trigger" data-modal="final-erd" src="images/kcc/final-erd.png">
-                <p class="caption">A simple ERD for the Consent object in KCC that I eventually created. It showcases the relationships among the Consent custom object from KCC, the Account, Case, and Data Use Purpose standard objects from Salesforce, and the Envelope Status third-party object from DocuSign.</i></p>
+                <p class="caption">A simple ERD for the Consent object in KCC that I eventually created. It showcases the relationships among the Consent custom object from KCC, the Account, Case, and Data Use Purpose standard objects from Salesforce, and the Envelope Status third-party object from DocuSign.</p>
 
                 <div class="modal" id="final-erd">
                     <span class="close">&times;</span>
@@ -212,7 +212,7 @@
                 <p>I faced some difficulty enforcing step #5 with the KCC team because many of the engineers have never worked with technical writers before. To relieve some confusion, I wrote up an internal Confluence page to explain how engineering teams for the Tx apps can work with the Technical Writing team.</p>
 
                 <img class="trigger" data-modal="tw-how-we-work" src="images/kcc/tw-how-we-work.png" alt="">
-                <p class="caption">A snapshot of the Confluence page I wrote for the Tx engineering teams. This page has been edited since I first published it in 2022.</i></p>
+                <p class="caption">A snapshot of the Confluence page I wrote for the Tx engineering teams. This page has been edited since I first published it in 2022.</p>
 
                 <div class="modal" id="tw-how-we-work">
                     <span class="close">&times;</span>
@@ -232,7 +232,7 @@
                 <p>Only after I resolved all of the feedback from the SME and peer reviews and finished the one-time tasks was I finally able to publish the KCC documentation alongside the KCC release. I officially published the KCC V1 product documentation on Komodo’s external documentation site in July 2022 and subsequently received the following peer bonuses from the product manager and an engineer.</p>
 
                 <img class="trigger" data-modal="peer-bonus" src="images/kcc/peer-bonus.png">
-                <p class="caption">The peer bonuses I received from the product manager and an engineer.</i></p>
+                <p class="caption">The peer bonuses I received from the product manager and an engineer.</p>
 
                 <div class="modal" id="peer-bonus">
                     <span class="close">&times;</span>
@@ -252,7 +252,7 @@
                 <p>I had frequently referenced the MIC documentation for guidance when writing for KCC V1 and wanted to do the same for KCC V1.x.y. However, I quickly noticed that MIC traditionally only released major versions, not minor or patch versions, and that I would need a different writing approach for KCC to <strong>distinguish between features in the original V1 major release and features in the subsequent V1.x.y minor and patch releases.</strong> After some thought, I decided to add a version number to the section title of each new and updated feature and add a version column to each metadata table as appropriate. This way, internal and external stakeholders could easily determine the specific release in which a feature or entity was added, deprecated, or updated.</p>
 
                 <img class="trigger" data-modal="release-notes-minor" src="images/kcc/release-notes-minor.png">
-                <p class="caption">Screenshots of the KCC V1.x.y release notes that I eventually published and iterated on. I included a version number to the title of each new feature and added version columns to the tables of the new, deleted, and modified entities.</i></p>
+                <p class="caption">Screenshots of the KCC V1.x.y release notes that I eventually published and iterated on. I included a version number to the title of each new feature and added version columns to the tables of the new, deleted, and modified entities.</p>
 
                 <div class="modal" id="release-notes-minor">
                     <span class="close">&times;</span>
@@ -324,7 +324,7 @@
                 <p>For example, if a new entity was added, I needed to remember to create new schema tables, add new fields to existing schema tables, and/or create and update the ERDs. Similarly, if any entity was deprecated, I needed to remember to add warnings throughout the product documentation where the entity was mentioned. This is because the Tx product and engineering teams typically support the two latest major versions of each Tx app, so I cannot immediately remove information about a deprecated entity from the product documentation.</p>
 
                 <img class="trigger" data-modal="product-documentation-warning" src="images/kcc/product-documentation-warning.png">
-                <p class="caption">A snapshot of the warnings I had added to a custom metadata type when a single field was initially deprecated and when the entire entity was also deprecated.</i></p>
+                <p class="caption">A snapshot of the warnings I had added to a custom metadata type when a single field was initially deprecated and when the entire entity was also deprecated.</p>
 
                 <div class="modal" id="product-documentation-warning">
                     <span class="close">&times;</span>
@@ -344,7 +344,7 @@
                 <p>To align with each product release, our Technical Writing team has a posting freeze process during which we compile and publish all of the documentation changes for the major, minor, or patch release. We call it a “posting freeze,” similar to how engineering teams may have a “code freeze,” because we cannot freely publish any Paligo output while we merge our changes, update our table of contents, and more. <strong>The overall posting freeze process was already established before I joined Komodo, but I worked with the other technical writers to revamp several required steps and tasks in the process.</strong> For example, we have since removed the step to request for the list of schema changes from the engineering lead because we gather and document this information as part of our standard product documentation process. Additionally, we have added a task to create a new section in the product’s announcements page when there are major updates to the product or documentation. There are also several differences in the posting freeze tasks for publishing the release notes and product documentation of each major, minor, or patch release, and some tasks must be completed before or after the actual duration of the posting freeze. For instance, only after the latest documentation changes have been published can we use <a href="https://www.screamingfrog.co.uk/seo-spider/" target="_blank">Screaming Frog</a> to crawl the documentation site to check for any broken external links.</p>
 
                 <img class="trigger" data-modal="posting-freeze-minor" src="images/kcc/posting-freeze-minor.png" alt="">
-                <p class="caption">A sample list of the posting freeze tasks that must be completed to publish the release notes of a minor or patch version. On each task, there is an indication of whether the task should be completed before, during, or after the posting freeze period.</i></p>
+                <p class="caption">A sample list of the posting freeze tasks that must be completed to publish the release notes of a minor or patch version. On each task, there is an indication of whether the task should be completed before, during, or after the posting freeze period.</p>
 
                 <div class="modal" id="posting-freeze-minor">
                     <span class="close">&times;</span>
@@ -366,7 +366,7 @@
                 <p>A known issue (KI) is a bug found in a live product that is deemed severe or common enough to require acknowledgement from the product team that the bug exists and potentially a hotfix release from the engineering team to resolve the bug. <strong>When I asked Tx team members how they determined if a bug was “severe or common enough,” I noticed there was hesitation and inconsistency in their responses and knew immediately that this would raise confusion amongst customers as well.</strong> I subsequently proposed documenting and publishing a page dedicated to breaking down this information for both internal and external stakeholders to know. Everyone was on board with this idea, so I drafted and published a KI definition page on the external documentation site for each TX app.</p>
 
                 <img class="trigger" data-modal="ki-definition" src="images/kcc/ki-definition.png">
-                <p class="caption">A snapshot of the KI definition page I wrote and published.</i></p>
+                <p class="caption">A snapshot of the KI definition page I wrote and published.</p>
 
                 <div class="modal" id="ki-definition">
                     <span class="close">&times;</span>
@@ -382,7 +382,7 @@
                 <p>Two Tx product and engineering leads later expressed concern that individual KIs were difficult to find in Komodo’s external documentation site. The link to the list of KIs was embedded in a sentence on the KI definitions page, and the link of each active KI would break once it became an archived KI.</p>
 
                 <img class="trigger" data-modal="ki-current-state" src="images/kcc/ki-current-state.png" alt="">
-                <p class="caption">The original user flow for finding KIs in the documentation site. The screenshots use the MIC documentation, but they also applied to the KCC documentation.</i></p>
+                <p class="caption">The original user flow for finding KIs in the documentation site. The screenshots use the MIC documentation, but they also applied to the KCC documentation.</p>
 
                 <div class="modal" id="ki-current-state">
                     <span class="close">&times;</span>
@@ -401,7 +401,7 @@
                 <p>However, the first user flow would keep a copy of the KI definition page in a KI output while the second user flow would only have the KI definition page in each of the individual product’s output. Additionally, while the former reduced the number of clicks for users who may not know what KIs are at all, the latter was easier to implement.</p>
 
                 <img class="trigger" data-modal="ki-proposed-1" src="images/kcc/ki-proposed-1.png" alt="">
-                <p class="caption">The first proposed solution for updating the KI user flow in the documentation site. The screenshots use the MIC documentation instead of the KCC documentation.</i></p>
+                <p class="caption">The first proposed solution for updating the KI user flow in the documentation site. The screenshots use the MIC documentation instead of the KCC documentation.</p>
                 
                 <div class="modal" id="ki-proposed-1">
                     <span class="close">&times;</span>
@@ -409,7 +409,7 @@
                 </div>
 
                 <img class="trigger" data-modal="ki-proposed-2" src="images/kcc/ki-proposed-2.png" alt="">
-                <p class="caption">The second proposed solution for updating the KI user flow in the documentation site. The screenshots use the MIC documentation instead of the KCC documentation.</i></p>
+                <p class="caption">The second proposed solution for updating the KI user flow in the documentation site. The screenshots use the MIC documentation instead of the KCC documentation.</p>
 
                 <div class="modal" id="ki-proposed-2">
                     <span class="close">&times;</span>

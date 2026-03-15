@@ -91,6 +91,23 @@ ol > ol {
     list-style-type: lower-alpha;
 }
 
+ol > ol > ol {
+    list-style-type: lower-roman;
+}
+
+table {
+    font-size: 80%;
+}
+
+td > ul {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+th, td {
+    vertical-align: top;
+}
+
 
 
 
@@ -562,6 +579,17 @@ video {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -56%);
+}
+
+td > img {
+    display: block;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.logo {
+    width: 160px;
+    margin-bottom: 40px !important;
 }
 
 .close {
